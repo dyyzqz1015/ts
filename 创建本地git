@@ -1,0 +1,147 @@
+git init #创建仓库
+git status #查看创建状态
+git config --global user.email 'dy_dyyzqz@163.com'
+git config --global user.name "冰山"
+git status #查看内容状，若是红色测需要 add,若为绿色则需要commit
+git add . #提交内容
+git status #查看内容状，若是红色测需要 add,若为绿色则需要commit
+git commit -m "提交" #""引号，引号里写备注：这里一定要写，不写无法提交
+
+更新远程仓库
+git remote rm origin
+git remote add origin git@github.com:Liutos/foobar.git
+
+
+
+
+
+
+qz@qz:~$ cd python
+qz@qz:~/python$ mkdir abc #创建文件夹abc
+qz@qz:~/python$ ls #查看文件
+abc  imagepy  jupyter-notebook
+qz@qz:~/python$ cd abc #进入到abC文件夹
+qz@qz:~/python/abc$ ls #查看文件，创建一个test.txt的文件
+qz@qz:~/python/abc$ git init #
+初始化空的 Git 仓库于 /home/qz/python/abc/.git/
+qz@qz:~/python/abc$ git status
+位于分支 master
+
+初始提交
+
+未跟踪的文件:
+  （使用 "git add <文件>..." 以包含要提交的内容）
+
+	test
+
+提交为空，但是存在尚未跟踪的文件（使用 "git add" 建立跟踪）
+
+qz@qz:~/python/jupyter-notebook$ git config --global user.email 'dy_dyyzqz@163.com'
+qz@qz:~/python/jupyter-notebook$ git config --global user.name "冰山"
+qz@qz:~/python/abc$ git add .
+qz@qz:~/python/abc$ git status 
+位于分支 master
+
+初始提交
+
+要提交的变更：
+  （使用 "git rm --cached <文件>..." 以取消暂存）
+
+	新文件：   test
+
+qz@qz:~/python/abc$ git commit -m "提交"
+[master （根提交） f3d6a35] 提交
+ 1 file changed, 1 insertion(+)
+ create mode 100644 test
+qz@qz:~/python/abc$ git status 
+位于分支 master
+无文件要提交，干净的工作区
+
+
+
+
+qz@qz:~/python/abc$ git remote add origin git@github.com:dyyzqz1015/test1.git
+qz@qz:~/python/abc$ git remote -v
+origin	git@github.com:dyyzqz1015/test1.git (fetch)
+origin	git@github.com:dyyzqz1015/test1.git (push)
+qz@qz:~/python/abc$ git push origin 
+warning: push.default 尚未设置，它的默认值在 Git 2.0 已从 'matching'
+变更为 'simple'。若要不再显示本信息并保持传统习惯，进行如下设置：
+
+  git config --global push.default matching
+
+若要不再显示本信息并从现在开始采用新的使用习惯，设置：
+
+  git config --global push.default simple
+
+当 push.default 设置为 'matching' 后，git 将推送和远程同名的所有
+本地分支。
+
+从 Git 2.0 开始，Git 默认采用更为保守的 'simple' 模式，只推送当前
+分支到远程关联的同名分支，即 'git push' 推送当前分支。
+
+参见 'git help config' 并查找 'push.default' 以获取更多信息。
+（'simple' 模式由 Git 1.7.11 版本引入。如果您有时要使用老版本的 Git，
+为保持兼容，请用 'current' 代替 'simple'）
+
+fatal: 当前分支 master 没有对应的上游分支。
+为推送当前分支并建立与远程上游的跟踪，使用
+
+    git push --set-upstream origin master
+
+
+
+qz@qz:~/python/abc$ mkdir ts
+qz@qz:~/python/abc$ cd ts
+qz@qz:~/python/abc/ts$ ls
+qz@qz:~/python/abc/ts$ echo "# test" >> README.md
+qz@qz:~/python/abc/ts$ ls
+README.md
+qz@qz:~/python/abc/ts$ git init
+初始化空的 Git 仓库于 /home/qz/python/abc/ts/.git/
+qz@qz:~/python/abc/ts$ git status 
+位于分支 master
+
+初始提交
+
+未跟踪的文件:
+  （使用 "git add <文件>..." 以包含要提交的内容）
+
+	README.md
+
+提交为空，但是存在尚未跟踪的文件（使用 "git add" 建立跟踪）
+qz@qz:~/python/abc/ts$ git add README.md 
+qz@qz:~/python/abc/ts$ git status 
+位于分支 master
+
+初始提交
+
+要提交的变更：
+  （使用 "git rm --cached <文件>..." 以取消暂存）
+
+	新文件：   README.md
+
+qz@qz:~/python/abc/ts$ git commit -m "first commit"
+[master （根提交） 59974e0] first commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+qz@qz:~/python/abc/ts$ git status 
+位于分支 master
+无文件要提交，干净的工作区
+qz@qz:~/python/abc/ts$ git remote add origin https://github.com/dyyzqz1015/test.git
+qz@qz:~/python/abc/ts$ git remote -v
+origin	https://github.com/dyyzqz1015/test.git (fetch)
+origin	https://github.com/dyyzqz1015/test.git (push)
+qz@qz:~/python/abc/ts$ git push -u origin master
+Username for 'https://github.com': dyyzqz1015
+Password for 'https://dyyzqz1015@github.com': 
+对象计数中: 3, 完成.
+写入对象中: 100% (3/3), 222 bytes | 0 bytes/s, 完成.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/dyyzqz1015/test.git
+ * [new branch]      master -> master
+分支 master 设置为跟踪来自 origin 的远程分支 master。
+
+
+
+

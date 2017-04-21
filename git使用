@@ -1,0 +1,99 @@
+
+git init #创建仓库
+git status #查看创建状态
+git config --global user.email 'dy_dyyzqz@163.com'
+git config --global user.name "冰山"
+
+
+
+
+
+
+
+
+1.将本地文件夹创建本地库
+git init
+
+qz@qz:~/python/jupyter-notebook$ git init
+初始化空的 Git 仓库于 /home/qz/python/jupyter-notebook/.git/
+
+
+2.加入别名和Email
+qz@qz:~/python/jupyter-notebook$ git config --global user.email 'dy_dyyzqz@163.com'
+qz@qz:~/python/jupyter-notebook$ git config --global user.name "冰山"
+qz@qz:~/python/jupyter-notebook$ 
+
+3.将本地文件夹加入文件
+git add . #. 是代表所有文件
+git status #查看状态
+
+qz@qz:~/python/jupyter-notebook$ git status 
+位于分支 master
+
+初始提交
+
+要提交的变更：
+  （使用 "git rm --cached <文件>..." 以取消暂存）
+
+	新文件：   .ipynb_checkpoints/02-python-essentials-checkpoint.ipynb
+	新文件：   .ipynb_checkpoints/0301_numpy-checkpoint.ipynb
+	新文件：   .ipynb_checkpoints/0302-matplotlib-basi-checkpoint.ipynb
+	新文件：   .ipynb_checkpoints/0305-array-calculation-method-checkpoint.ipynb
+	新文件：   .ipynb_checkpoints/Untitled2-checkpoint.ipynb
+	新文件：   .ipynb_checkpoints/Untitled3-checkpoint.ipynb
+	新文件：   02-python-essentials.ipynb
+	新文件：   0301_numpy.ipynb
+	新文件：   0302-matplotlib-basi.ipynb
+	新文件：   0305-array-calculation-method.ipynb
+	新文件：   Untitled.ipynb
+	新文件：   Untitled1.ipynb
+	新文件：   Untitled2.ipynb
+	新文件：   Untitled3.ipynb
+	新文件：   "git\344\275\277\347\224\250"
+
+
+3.将本地文件加入管理
+
+git commit -m '加入管理' #'' 引号里是提交的版本记录
+git status
+
+
+qz@qz:~/python/jupyter-notebook$ git commit -m "将文件加入受控管理"
+[master （根提交） a0aaa56] 将文件加入受控管理
+ 15 files changed, 2929 insertions(+)
+ create mode 100644 .ipynb_checkpoints/02-python-essentials-checkpoint.ipynb
+ create mode 100644 .ipynb_checkpoints/0301_numpy-checkpoint.ipynb
+ create mode 100644 .ipynb_checkpoints/0302-matplotlib-basi-checkpoint.ipynb
+ create mode 100644 .ipynb_checkpoints/0305-array-calculation-method-checkpoint.ipynb
+ create mode 100644 .ipynb_checkpoints/Untitled2-checkpoint.ipynb
+ create mode 100644 .ipynb_checkpoints/Untitled3-checkpoint.ipynb
+ create mode 100644 02-python-essentials.ipynb
+ create mode 100644 0301_numpy.ipynb
+ create mode 100644 0302-matplotlib-basi.ipynb
+ create mode 100644 0305-array-calculation-method.ipynb
+ create mode 100644 Untitled.ipynb
+ create mode 100644 Untitled1.ipynb
+ create mode 100644 Untitled2.ipynb
+ create mode 100644 Untitled3.ipynb
+ create mode 100644 "git\344\275\277\347\224\250"
+
+qz@qz:~/python/jupyter-notebook$ git status
+位于分支 master
+无文件要提交，干净的工作区
+
+
+ 也可以不登陆远程直接本地操作
+
+1. git init
+
+2. git add .
+
+3. git commit -am "###"      -------以上3步只是本地提交
+
+4.git remote add origin git@xx.xx.xx.xx:repos/xxx/xxx/xxx.git
+
+5.git push origin 本地分支:远程分支
+
+
+
+
